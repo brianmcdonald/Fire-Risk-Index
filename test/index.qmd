@@ -1,0 +1,31 @@
+---
+title: "Fire Risk Demo"
+subtitle: "A early draft analysis exploring past fires detected close to IDP sites in Nigeria and how Fire Weather forcasts can be created for sites. "
+#author: ""
+#abstract-title: "About the SCWG"
+#abstract: "sample abstract"
+#affilliation: "IOM"
+#date: today
+#date-format: "D MMMM YYYY"
+#date-modified: last-modified
+title-block-style: default
+title-block-banner: true
+title-block-banner-background-color: "#1b667c"
+backgroundcolor: "#f5f3e9"
+format: 
+  html: 
+    theme:
+      - default
+      - custom.scss
+    self-contained: true
+    code-fold: true
+    echo: false
+    toc: true
+    warning: false
+    code-overflow: wrap
+jupyter: python3
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
