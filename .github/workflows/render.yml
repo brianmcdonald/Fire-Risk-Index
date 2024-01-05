@@ -1,7 +1,7 @@
 ## renders to docs
 on:
   schedule:
-    - cron: '10 17 * * *'
+    - cron: '30 8 * * *'
 
 name: Render each day
 
@@ -17,6 +17,10 @@ jobs:
       
       - name: Setup Python
         uses: actions/setup-python@v3
+
+      - name: Install jupyter
+        uses: actions/setup-python@v5
+        run: pip install -r requirements.txt
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
