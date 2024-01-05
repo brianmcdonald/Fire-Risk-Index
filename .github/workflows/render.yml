@@ -1,7 +1,7 @@
 ## renders to docs
 on:
   schedule:
-    - cron: '52 15 * * *'
+    - cron: '7 15 * * *'
 
 name: Render each day
 
