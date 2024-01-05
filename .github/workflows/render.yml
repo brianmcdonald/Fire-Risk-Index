@@ -1,7 +1,7 @@
 ## renders to docs
 on:
   schedule:
-    - cron: '02 10 * * *'
+    - cron: '02 15 * * *'
 
 name: Render each day
 
@@ -23,5 +23,3 @@ jobs:
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
-        with:
-          # path: test
