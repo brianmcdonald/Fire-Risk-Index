@@ -1,31 +1,41 @@
 ---
-title: "Fire Risk Demo"
-subtitle: "A early draft analysis exploring past fires detected close to IDP sites in Nigeria and how Fire Weather forcasts can be created for sites. "
-#author: ""
-#abstract-title: "About the SCWG"
-#abstract: "sample abstract"
-#affilliation: "IOM"
-#date: today
-#date-format: "D MMMM YYYY"
-#date-modified: last-modified
-title-block-style: default
-title-block-banner: true
-title-block-banner-background-color: "#1b667c"
-backgroundcolor: "#f5f3e9"
+title: "Matplotlib Demo"
+author: "Norah Smith"
+date: "5/22/2021"
 format: 
-  html: 
-    theme:
-      - default
-      - custom.scss
-    self-contained: true
+  html:
     code-fold: true
-    echo: false
-    toc: true
-    warning: false
-    code-overflow: wrap
 jupyter: python3
 ---
 
-This is a Quarto website.
+## Polar Axis
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+testing
+
+```{python}
+
+```
+
+😁
+
+1)  one
+
+2)  **two**
