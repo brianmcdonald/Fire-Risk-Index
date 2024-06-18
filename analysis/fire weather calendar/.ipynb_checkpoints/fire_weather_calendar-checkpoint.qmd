@@ -13,7 +13,6 @@ jupyter:
     name: python3
 ---
 
-
 ### First draft
 
 - read in sites with locations in a country to a datframe
@@ -30,4 +29,26 @@ jupyter:
 - plot using subplots, to show the seasons across all countries where we have site data
 - export to html and pdf
 
+```{python}
+import geopandas as gpd
+import pandas as pd
+```
+
+```{python}
+# read in the excel file of the sites
+df = pd.read_excel('./data/DTM Nigeria Round 44 Dataset of Needs Monitoring Assessment for IDPs (2).xlsx', sheet_name=0)[['Site Name ', 'Latitude', 'Longitude','Type']]
+
+# convert it to a geopandas geodataframe
+gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.Longitude, df.Latitude), crs="EPSG:4326")
+```
+
+```{python}
+# show the data
+gdf
+```
+
+```{python}
+# quick map
+gdf.explore()
+```
 
