@@ -1,0 +1,33 @@
+---
+title: Analysis plan
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
+      jupytext_version: 1.16.2
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+
+### First draft
+
+- read in sites with locations in a country to a datframe
+- read in raster of FWI, using X sample dates for the past year
+- use [geopandas sampling](https://geopandas.org/en/stable/docs/user_guide/sampling.html) to get the raster values for each site location
+- for each sampled raster set the date of the dataframe and concat the data to the existing data
+- groupby date, getting the min, mean and max ast the values for each date
+- plot the line/area chart using hvplot (interactive) and matplotlib(static)
+- export to html and pdf
+
+### Second draft
+- sample for the past 10 years instead of 1, createing new mins, mean and max values
+- repeat for multiple countries
+- plot using subplots, to show the seasons across all countries where we have site data
+- export to html and pdf
+
+
